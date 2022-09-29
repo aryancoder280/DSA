@@ -3,23 +3,23 @@
 using namespace std;
 int main() {
     
-    string a,b;
+    string a,b = "";
     cin>>a;
-    bool duplicate = false;
-    int curr = 0,next=1;
+    int curr = 0,next=0;
     while(next<a.size()) {
-        while(a[curr] == a[next]) {
-            duplicate = !duplicate ? true : duplicate;
+        while(next<a.size() && a[curr] == a[next]) {
             next++;
         }
         char diff = next - curr + '0';
-        b = a[curr];
-        b = b + diff;
+        if(diff != '1'){
+            b += a[curr];
+            b = b + diff;
+        }
+        else
+        {
+            b += a[curr];
+        }
         curr = next;
-        next++;
     }
-    if(duplicate)
-    cout<<b<<endl;
-    else
-    cout<<a<<endl;
+   cout<<b<<endl;
 }
