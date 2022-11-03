@@ -27,9 +27,9 @@ int sum(vector<vector<int> >v, int sr, int sc, int er, int ec) {
     }
     int sum2=0;
     if(sc == 0){
-        sum2 = colSum[sr][]
+        sum2 = colSum[sr][2];
     }
-    return sum;
+    return sum2;
 }
 int main() {
     int n,m;
